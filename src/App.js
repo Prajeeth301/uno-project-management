@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Footer from './layout/footer/footer.component';
+import Header from './layout/header/header.component';
+import Main from './layout/main/main.component';
+import SideBar from './layout/side-bar/side-bar.component';
+import { useLocation } from 'react-router-dom';
+import { excludedRoutes } from './config/excluded-routes';
+
 
 function App() {
+  const { pathname } = useLocation();
+  const [shouldHideLayout, setShouldHideLayout] = useState(false);
+
+  useEffect(() => {
+    setShouldHideLayout(excludedRoutes.includes(pathname))
+  }, [pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      {shouldHideLayout ? null : <Header />}
+      {shouldHideLayout ? null : <SideBar />}
+      <Main shouldHideLayout={shouldHideLayout} />
+      {shouldHideLayout ? null : <Footer />}
     </div>
   );
 }

@@ -1,0 +1,63 @@
+.h-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    min-height: 80px;
+    align-items: center;
+}
+
+.h-timeline .timeline-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+.timeline-item .list-item {
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.h-timeline .step-icon {
+    border: 1px solid rgba(3, 142, 220, .2);
+    border-radius: 50%;
+    color: #038edc;
+    display: inline-block;
+    font-size: 20px;
+    height: 56px;
+    line-height: 54px;
+    position: relative;
+    text-align: center;
+    width: 56px;
+    z-index: 1;
+}
+
+.timeline-item .list-item.active {
+    background-color: transparent;
+    color: #495057;
+}
+
+.timeline-item .list-item::after {
+    background-color: #eff0f2;
+    content: "";
+    height: 2px;
+    left: 75%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.h-timeline .list-item.active .step-icon {
+    background-color: rgba(3, 142, 220, .2);
+    border-color: rgba(3, 142, 220, .2);
+    color: #038edc;
+}
+
+.h-timeline #item4::after {
+    display: none;
+}

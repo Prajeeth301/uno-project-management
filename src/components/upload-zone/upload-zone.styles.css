@@ -1,0 +1,24 @@
+.upload-zone {
+    height: 100%;
+    margin: 1.3rem 0;
+}
+
+.upload-zone .text {
+    font-weight: 600;
+    margin: 0;
+    color: #038edc;
+}
+
+.upload-zone__container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border: 2px dashed #038edc;
+    background: #fff;
+    min-height: 100px;
+}
+
+.upload-zone__container.active {
+    background: lightblue;
+    color: white;
+}

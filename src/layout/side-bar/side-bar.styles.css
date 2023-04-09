@@ -1,0 +1,19 @@
+.brand-logo {
+    max-height: 44px;
+}
+
+.main-sidebar {
+    box-shadow: none;
+    border-right: 1px solid #dee2e6
+}
+
+.brand-link {
+    padding: 0.3em 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #009edb;
+}
