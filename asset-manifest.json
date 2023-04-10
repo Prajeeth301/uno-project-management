@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/uno-project-management/static/css/main.4a90bd61.css",
+    "main.js": "/uno-project-management/static/js/main.c6da4670.js",
+    "static/js/787.ec3a9e1a.chunk.js": "/uno-project-management/static/js/787.ec3a9e1a.chunk.js",
+    "index.html": "/uno-project-management/index.html",
+    "main.4a90bd61.css.map": "/uno-project-management/static/css/main.4a90bd61.css.map",
+    "main.c6da4670.js.map": "/uno-project-management/static/js/main.c6da4670.js.map",
+    "787.ec3a9e1a.chunk.js.map": "/uno-project-management/static/js/787.ec3a9e1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a90bd61.css",
+    "static/js/main.c6da4670.js"
+  ]
+}
