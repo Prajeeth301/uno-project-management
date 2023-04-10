@@ -38,6 +38,22 @@ function SideBar(props) {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/map-view" className={isActiveLink}>
+                <i className="nav-icon fas fa-map-marked"></i>
+                <p className='ml-1'>
+                  Map View
+                </p>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/reports" className={isActiveLink}>
+                <i className="nav-icon fas fa-sticky-note"></i>
+                <p className='ml-1'>
+                  Reports
+                </p>
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/support" className={isActiveLink}>
                 <i className="nav-icon fas fa-user-plus"></i>
                 <p className='ml-1'>

@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login(props) {
+    const navigate = useNavigate();
+
+    const redirectToHome = () => {
+        navigate('/');
+    }
+
     return (
         <div className='login-page'>
             <div className="login-box">
@@ -48,7 +55,7 @@ function Login(props) {
 
                                 <div className="col-4">
 
-                                    <button type="submit" className="btn btn-primary btn-block">
+                                    <button type="submit" onClick={redirectToHome} className="btn btn-primary btn-block">
                                         Sign In
                                     </button>
                                 </div>

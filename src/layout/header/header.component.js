@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './header.styles.css';
 
 function Header(props) {
   return (
@@ -15,11 +16,11 @@ function Header(props) {
         <form className="form-inline ml-3">
           <div className="input-group input-group-sm">
             <input className="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
-              <div className="input-group-append">
-                <button className="btn btn-navbar" type="submit">
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
+            <div className="input-group-append">
+              <button className="btn btn-navbar" type="submit">
+                <i className="fas fa-search"></i>
+              </button>
+            </div>
           </div>
         </form>
       </ul>
@@ -73,7 +74,7 @@ function Header(props) {
               </div>
             </Link>
             <div className="dropdown-divider"></div>
-            <a href="#" className="dropdown-item dropdown-footer">See All Messages</a>
+            <a href="/" className="dropdown-item dropdown-footer">See All Messages</a>
           </div>
         </li>
         <li className="nav-item dropdown">
@@ -97,6 +98,22 @@ function Header(props) {
             <Link href="/" className="dropdown-item dropdown-footer">See All Notifications</Link>
           </div>
         </li>
+        <li className="nav-item dropdown ml-2">
+          <Link className="nav-link user" data-toggle="dropdown" href="/">
+            <i className="fas fa-user"></i>
+          </Link>
+          <div className="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+            <Link href="/" className="dropdown-item">
+              <strong className='d-block text-center'>Admin</strong>
+            </Link>
+            <div className="dropdown-divider"></div>
+            <Link href="/" className="dropdown-item">
+              <div className='text-center'>Logout</div>
+            </Link>
+          </div>
+        </li>
+
+
       </ul>
     </nav>
   );

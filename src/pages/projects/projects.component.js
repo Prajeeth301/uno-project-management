@@ -3,10 +3,14 @@ import './projects.styles.css';
 import { Link } from 'react-router-dom';
 import { PROJECTS_MOCK } from '../../mocks/projects.mock';
 import { PROJECT_STATUS_CONFIG } from '../../config/project-status.config';
+import { GHANA_REGIONS } from '../../mocks/regions.mock';
 
 
 function Projects(props) {
+    let allProjects = [...PROJECTS_MOCK.ongoingProjects, ...PROJECTS_MOCK.upcomingProjects]
+
     const { ongoingProjects, upcomingProjects } = PROJECTS_MOCK;
+    
     return (
         <section className="content pt-2">
 
@@ -21,6 +25,43 @@ function Projects(props) {
                 </div>
 
                 <div className="card-body">
+                <h6 className='text-muted'>Filter By:</h6>
+                            <div className='row'>
+                                <div className='col-md-3'>
+                                    <div className="form-group">
+                                        <label>Project Name</label>
+                                        <select className="form-control">
+                                            {
+                                                allProjects.map((project, index) => <option key={index}>{project.name}</option>)
+                                            }
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div className='col-md-3'>
+
+                                    <div className="form-group">
+                                        <label>Project Type</label>
+                                        <select className="form-control">
+                                            {
+                                                allProjects.map((project, index) => <option key={index}>{project.type}</option>)
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className='col-md-3'>
+
+                                    <div className="form-group">
+                                        <label>Region</label>
+                                        <select className="form-control">
+                                            {
+                                                GHANA_REGIONS.map((region, index) => <option key={index}>{region}</option>)
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                     <h5 className='text-muted my-3'>Ongoing Projects</h5>
                     <table className="table projects table-bordered table-hover">
                         <thead>

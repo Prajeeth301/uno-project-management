@@ -17,12 +17,12 @@ function AddUser(props) {
                         <form id="quickForm">
                             <div className="card-body">
                                 <div className="form-group">
-                                    <label for="exampleInputEmail1">Email Address</label>
-                                    <input type="email" name="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                    <label for="contact">Contact no.</label>
+                                    <input type="text" name="contact" className="form-control" id="contact" placeholder="Enter contact number" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" className="form-control" id="password" placeholder="Password" />
                                 </div>
                                 <div className="form-group">
                                     <label>Project</label>

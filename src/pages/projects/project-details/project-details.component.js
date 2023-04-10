@@ -5,20 +5,30 @@ import { PROJECTS_MOCK } from '../../../mocks/projects.mock';
 import ProjectOverview from './project-overview/project-overview.component';
 import ProjectTasks from './project-tasks/project-tasks.component';
 import TeamMembers from './team-members/team-members.component';
-
+import { TASKS_MOCK } from '../../../mocks/tasks.mock';
+import UploadZone from '../../../components/upload-zone/upload-zone.component';
 
 function ProjectDetails(props) {
     let [projectDetails, setProjectDetails] = useState(null);
+    let [projectTasks, setProjectTasks] = useState([]);
+
+    const handleFiles = (files) => {
+        if (files.length) {
+           console.log(files);
+        }
+    }
 
     const addNewTeamMembers = (newTeamMembers) => {
         props.addNewTeamMembers(newTeamMembers);
     }
 
     let { id } = useParams();
+    
     const navigate = useNavigate();
 
     useEffect(() => {
         if (id) {
+            setProjectTasks(TASKS_MOCK[id]);
             let { ongoingProjects, upcomingProjects } = PROJECTS_MOCK;
             let currentProject = ongoingProjects.filter(p => p.slug === id);
             if (currentProject.length === 0) {
@@ -59,9 +69,13 @@ function ProjectDetails(props) {
                     </div>
                     <div className="card-body">
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-4">
                                 {/* important info or project gallery */}
+                                <h6 className='text-muted'>Upload Project Documents here</h6>
+                                <UploadZone handleFiles={handleFiles} />
                             </div>
+                            <div className='col-2'></div>
+
                             <div className="col-3 text-muted">
                                 <div className="d-flex align-items-center mt-3">
                                     <div className="flex-shrink-0 mr-3">
@@ -91,11 +105,11 @@ function ProjectDetails(props) {
             <div className="card card-info card-outline card-outline-tabs">
                 <div className="card-header p-0 border-bottom-0">
                     <ul className="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link active" id="overview-tab" data-toggle="pill"
                                 href="#overview" role="tab" aria-controls="overview"
                                 aria-selected="true">Overview</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" id="tasks-tab" data-toggle="pill"
                                 href="#tasks" role="tab" aria-controls="tasks"
@@ -115,13 +129,13 @@ function ProjectDetails(props) {
                 </div>
                 <div className="card-body">
                     <div className="tab-content" id="custom-tabs-four-tabContent">
-                        <div className="tab-pane fade active show" id="overview" role="tabpanel"
+                        {/* <div className="tab-pane fade active show" id="overview" role="tabpanel"
                             aria-labelledby="overview-tab">
                             <ProjectOverview />
-                        </div>
-                        <div className="tab-pane fade" id="tasks" role="tabpanel"
+                        </div> */}
+                        <div className="tab-pane fade active show" id="tasks" role="tabpanel"
                             aria-labelledby="tasks-tab">
-                            <ProjectTasks />
+                            <ProjectTasks tasks={projectTasks} />
                         </div>
                         <div className="tab-pane fade" id="issues" role="tabpanel"
                             aria-labelledby="issues-tab">

@@ -1,10 +1,12 @@
 import React from 'react';
+import { TASK_STATUS_CONFIG } from '../../../../config/task-status.config';
+import { TASK_SEVERITY_CONFIG } from '../../../../config/task-severity.config';
 
-function ProjectTasks(props) {
+function ProjectTasks({ tasks }) {
     return (
         <div>
             <div className='d-flex justify-content-end mb-3'>
-            <button className="btn btn-success btn-sm"><i class="fa fa-plus me-1"></i> Add New Task</button>
+                <button className="btn btn-success btn-sm"><i class="fa fa-plus me-1"></i> Add New Task</button>
             </div>
             <table id="example2" className="table table-bordered table-hover dataTable dtr-inline"
                 aria-describedby="example2_info">
@@ -27,6 +29,24 @@ function ProjectTasks(props) {
                     </tr>
                 </thead>
                 <tbody>
+
+                    {!!tasks && tasks.length !== 0 && tasks.map((task, index) => {
+                        return (
+                        <tr key={index}>
+                            <td className="dtr-control sorting_1" tabIndex="0">{task.id}</td>
+                            <td>{task.task_name}</td>
+                            <td><span className={`badge badge-${TASK_STATUS_CONFIG[task.status]}`}>{task.status}</span></td>
+                            <td><span>{task.end_date}</span></td>
+                            
+                            <td><span className={`badge badge-${TASK_SEVERITY_CONFIG[task.severity]}`}>{task.severity}</span></td>
+                            <td>{task.assignee}</td>
+                        </tr>
+                    )}
+                    )}
+
+
+
+                    {/*                 
                     <tr className="even">
                         <td className="dtr-control sorting_1" tabIndex="0">006</td>
                         <td>Footer responsive</td>
@@ -90,11 +110,11 @@ function ProjectTasks(props) {
                         <td><span className="badge badge-pill badge-danger">High</span></td>
                         <td>lokesh</td>
 
-                    </tr>
+                    </tr> */}
 
                 </tbody>
             </table>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-sm-12 col-md-5">
                     <div className="dataTables_info" id="example2_info" role="status" aria-live="polite">
                         Showing 1 to 10 of 57 entries</div>
@@ -136,7 +156,7 @@ function ProjectTasks(props) {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

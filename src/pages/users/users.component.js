@@ -38,7 +38,7 @@ function Users(props) {
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Contact</th>
                                         <th>Role</th>
                                         <th>Status</th>
                                         <th>Actions</th>
@@ -49,7 +49,7 @@ function Users(props) {
                                         <tr key={user.id}>
                                             <td>{user.id}</td>
                                             <td>{user.name}</td>
-                                            <td>{user.email}</td>
+                                            <td>{user.contact}</td>
                                             <td>{user.role}</td>
                                             <td>{user.status}</td>
                                             <td>
