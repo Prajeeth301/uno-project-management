@@ -35,8 +35,8 @@ function AddReportsAndDocs({ values, onSubmit, onPrevious }) {
                             <small className='text-muted'><strong>{item.name}</strong></small>
 
                             <div onClick={() => removeFile(index)}>
-                                <span class="btn btn-light btn-sm">
-                                    <i class="fas fa-trash"></i>
+                                <span className="btn btn-light btn-sm">
+                                    <i className="fas fa-trash"></i>
                                 </span>
                             </div>
                         </div>

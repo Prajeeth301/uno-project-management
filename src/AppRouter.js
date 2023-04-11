@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import PageNotFound from './pages/page-not-found/page-not-found.component';
 import Login from './pages/login/login.component';
 import Dashboard from './pages/dashboard/dashboard.component';
@@ -17,18 +17,16 @@ function AppRouter(props) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        let isLoggedIn = new Boolean(localStorage.getItem("isLoggedIn"));
+        let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
         if (!!isLoggedIn && !isLoggedIn) {
             navigate('/login');
         };
-    })
+    }, [navigate])
 
     return (
         <Routes>
-            <Route path='/login' element={<Login />} />
-            <Route path='/uno-project-management' element={<Navigate replace to="/login" />} />
-            <Route path='/login' element={<Login />} />
             <Route path="/" element={<Dashboard />} />
+            <Route path='/login' element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
             <Route path="/users/add-user" element={<AddUser />} />

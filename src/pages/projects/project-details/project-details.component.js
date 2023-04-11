@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './project-details.styles.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { PROJECTS_MOCK } from '../../../mocks/projects.mock';
-import ProjectOverview from './project-overview/project-overview.component';
+// import ProjectOverview from './project-overview/project-overview.component';
 import ProjectTasks from './project-tasks/project-tasks.component';
 import TeamMembers from './team-members/team-members.component';
 import { TASKS_MOCK } from '../../../mocks/tasks.mock';
@@ -113,7 +113,7 @@ function ProjectDetails(props) {
                         <li className="nav-item">
                             <a className="nav-link" id="tasks-tab" data-toggle="pill"
                                 href="#tasks" role="tab" aria-controls="tasks"
-                                aria-selected="false">Tasks</a>
+                                aria-selected="false">Project Activities</a>
                         </li>
                         {/* <li className="nav-item">
                             <a className="nav-link" id="issues-tab" data-toggle="pill"

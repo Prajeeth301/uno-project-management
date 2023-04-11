@@ -98,16 +98,17 @@ function Header(props) {
             <Link href="/" className="dropdown-item dropdown-footer">See All Notifications</Link>
           </div>
         </li>
+        <li>
+        <div className='nav-link'>Welcome <strong className='text-pink text-uppercase'>Dominic</strong></div>
+        </li>
         <li className="nav-item dropdown ml-2">
-          <Link className="nav-link user" data-toggle="dropdown" href="/">
-            <i className="fas fa-user"></i>
-          </Link>
-          <div className="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-            <Link href="/" className="dropdown-item">
-              <strong className='d-block text-center'>Admin</strong>
+            
+            <Link className="nav-link user" data-toggle="dropdown" href="/">
+              <i className="fas fa-user"></i>
             </Link>
+          <div className="dropdown-menu dropdown-menu-sm dropdown-menu-right">
             <div className="dropdown-divider"></div>
-            <Link href="/" className="dropdown-item">
+            <Link to="/login" className="dropdown-item">
               <div className='text-center'>Logout</div>
             </Link>
           </div>

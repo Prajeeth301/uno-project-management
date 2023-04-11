@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* .content-wrapper {
+  background: #4568DC;
+  background: -webkit-linear-gradient(to left, #B06AB3, #4568DC);
+  background: linear-gradient(to left, #B06AB3, #4568DC);
+
+} */
+.content-wrapper {
+  background: #3494E6; 
+  background: -webkit-linear-gradient(to bottom, #EC6EAD, #3494E6); 
+  background: linear-gradient(to bottom, #EC6EAD, #3494E6); 
+  
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

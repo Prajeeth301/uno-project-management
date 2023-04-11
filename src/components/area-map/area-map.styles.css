@@ -1,0 +1,31 @@
+.map-view{
+    position: relative;
+    width: 100%;
+}
+
+.pins .pin{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    transform: translate(-50%,50%);
+}
+
+#savannah-region{
+    top: 125px;
+    left: 200px;
+}
+
+#northern{
+    top: 90px;
+    left: 365px;
+}
+
+#north-east{
+    top: 35px;
+    left: 310px;
+}
+
+#bond-east{
+    top: 265px;
+    left: 260px;
+}

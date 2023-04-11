@@ -10,10 +10,10 @@ function Reports(props) {
 
             {
                 documents.map((item, index) => (
-                    <div className='col-md-3'>
+                    <div className='col-md-3' key={index}>
 
                     <div className='card report'>
-                        <div className='card-body' key={index} >
+                        <div className='card-body'  >
 
                             <small className='text-muted'><strong>{item.name}</strong></small>
                         </div>

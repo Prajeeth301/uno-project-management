@@ -6,7 +6,7 @@ function ProjectTasks({ tasks }) {
     return (
         <div>
             <div className='d-flex justify-content-end mb-3'>
-                <button className="btn btn-success btn-sm"><i class="fa fa-plus me-1"></i> Add New Task</button>
+                <button className="btn btn-success btn-sm"><i className="fa fa-plus me-1"></i> Add New Activity</button>
             </div>
             <table id="example2" className="table table-bordered table-hover dataTable dtr-inline"
                 aria-describedby="example2_info">
@@ -17,7 +17,7 @@ function ProjectTasks({ tasks }) {
                             aria-label="Rendering engine: activate to sort column descending">Id
                         </th>
                         <th className="sorting" tabIndex="0" aria-controls="example2" rowSpan="1" colSpan="1"
-                            aria-label="Browser: activate to sort column ascending">Task</th>
+                            aria-label="Browser: activate to sort column ascending">Activities</th>
                         <th className="sorting" tabIndex="0" aria-controls="example2" rowSpan="1" colSpan="1"
                             aria-label="Platform(s): activate to sort column ascending">Status</th>
                         <th className="sorting" tabIndex="0" aria-controls="example2" rowSpan="1" colSpan="1"

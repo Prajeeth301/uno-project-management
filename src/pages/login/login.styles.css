@@ -1,0 +1,23 @@
+.login-page{
+    position: relative;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.login-bg-image{
+    scale: 1.1;
+}
+
+.login-box{
+    margin: 0 auto;
+
+}
+
+/* .login-page .bg-image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */

@@ -30,16 +30,16 @@ function AddMember(props) {
 
 
     return (
-        <div class="modal fade" id="modal-default">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add New Member</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div className="modal fade" id="modal-default">
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title">Add New Member</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
 
                         <div className="form-group">
                             <label htmlFor="teamMember">Assign Team Member:</label>
@@ -75,9 +75,9 @@ function AddMember(props) {
                         )}
 
                     </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onClick={handleSubmit}>Save changes</button>
+                    <div className="modal-footer justify-content-between">
+                        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-primary" onClick={handleSubmit}>Save changes</button>
                     </div>
                 </div>
             </div>

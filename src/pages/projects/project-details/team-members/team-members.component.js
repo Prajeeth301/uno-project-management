@@ -10,10 +10,10 @@ function TeamMembers(props) {
 
     return (
         <div>
-            <div class="d-flex justify-content-between mb-3">
-                <h3 class="card-title">Member List (2)</h3>
-                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-default">
-                    <i class="fa fa-plus me-1"></i> Add New Member
+            <div className="d-flex justify-content-between mb-3">
+                <h3 className="card-title">Member List (2)</h3>
+                <button className="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-default">
+                    <i className="fa fa-plus me-1"></i> Add New Member
                 </button>
             </div>
 

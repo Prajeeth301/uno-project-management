@@ -17,7 +17,7 @@ export const USERS_MOCK = [
         "id": "3",
         "name": "Samuel Amo-Nimoh",
         "contact": "03720-22426/0244223868",
-        "role": "Super Admin",
+        "role": "Coordinator",
         "status": "Active"
     },
     {
@@ -31,7 +31,7 @@ export const USERS_MOCK = [
         "id": "5",
         "name": "Beata Awinpoga Akanyani",
         "contact": "0277336441",
-        "role": "Admin",
+        "role": "Editor",
         "status": "Active"
     },
     {
@@ -45,21 +45,21 @@ export const USERS_MOCK = [
         "id": "7",
         "name": "Madam Rachel",
         "contact": "0249326845",
-        "role": "Admin",
+        "role": "Publisher",
         "status": "Active"
     },
     {
         "id": "8",
         "name": "Mr. Basit",
         "contact": "0208414677",
-        "role": "Admin",
+        "role": "Coordinator",
         "status": "Active"
     },
     {
         "id": "9",
         "name": "Mr. Baako Abdul Fatawu",
         "contact": "0246901044",
-        "role": "Admin",
+        "role": "Editor",
         "status": "Active"
     },
     {

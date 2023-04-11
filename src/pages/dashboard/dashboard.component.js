@@ -1,86 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ghanaImage from '../../assets/ghana.png';
+import MonthlyBudgetChart from '../../charts/budget/monthly/monthly-budget-chart.component';
+import AreaMap from '../../components/area-map/area-map.component';
+import ProjectMonthlyStatistics from '../../charts/projects/monthly-statistics/monthly-statistics.component';
 
 
 function Dashboard(props) {
+    const [activeRegion, setActiveRegion] = useState('');
+    const [showRegionProjectStatus, setShowRegionProjectStatus] = useState(false);
+
+    const showProjectStatus = (region) => {
+        setActiveRegion(region);
+        setShowRegionProjectStatus(true);
+    }
 
     return (
         <div className="content pt-2">
-            <div className="row">
-                <div className="col-lg-6">
-                    <div className="card">
-                        <div className="card-header border-0">
-                            <div className="d-flex justify-content-between">
-                                <h3 className="card-title">Project Statistics</h3>
-                                <Link to="/reports">View Report</Link>
+            <div className='row'>
+                <div className='col-md-12'>
+                    <div className='card'>
+                        <div className='card-header mb-0'>
+                            <h5 className='card-title text-bold'>Afram Plains Development Organization (APDO)</h5>
+                            <div className="card-tools">
+                                <Link to="/map-view" className='btn bg-gradient-success btn-sm mr-2'>
+                                    <i className="fa fa-map-marked"></i>  Map View
+                                </Link>
+                                <Link to="/projects" className='btn bg-gradient-success btn-sm mr-2'>
+                                    <i className="fa fa-list-squares"></i>  List View
+                                </Link>
                             </div>
                         </div>
-                        <div className="card-body">
-                            <div className="d-flex">
-                                <p className="d-flex flex-column">
-                                    <span className="text-bold text-lg">820</span>
-                                    <span>Project Spread</span>
-                                </p>
-                                <p className="ml-auto d-flex flex-column text-right">
-                                    {/* <span className="text-success">
-                                        <i className="fas fa-arrow-up"></i> 12.5%
-                                    </span>
-                                    <span className="text-muted">Since last week</span> */}
-                                </p>
-                            </div>
+                        <div className='card-body'>
+                            <div className='row'>
 
-                            <div className="position-relative mb-4">
-                                <canvas id="visitors-chart" height="200"></canvas>
-                            </div>
+                                <div className='col-md-6'>
+                                    <AreaMap showProjectStatus={showProjectStatus} />
+                                </div>
+                                <div className='col-md-6'>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div className="small-box">
+                                                <div className="inner">
+                                                    <h3>10</h3>
+                                                    <p className='m-0'>Total Projects</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="small-box ">
+                                                <div className="inner">
+                                                    <h3>4</h3>
+                                                    <p className='m-0'>Active Projects</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="small-box">
+                                                <div className="inner">
+                                                    <h3>6</h3>
+                                                    <p className='m-0'>Completed Projects</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="small-box">
+                                                <div className="inner">
+                                                    <h3>65</h3>
 
-                            <div className="d-flex flex-row justify-content-end">
-                                <span className="mr-2">
-                                    <i className="fas fa-square text-primary"></i> This Week
-                                </span>
-
-                                <span>
-                                    <i className="fas fa-square text-gray"></i> Last Week
-                                </span>
+                                                    <p className='m-0'>Our Team</p>
+                                                </div>
+                                                <div className="icon">
+                                                    <i className="ion ion-pie-graph"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            {showRegionProjectStatus ? <ProjectMonthlyStatistics /> : null}
+                            {showRegionProjectStatus ? <MonthlyBudgetChart region={activeRegion} /> : null}
                         </div>
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <div className="card">
-                        <div className="card-header border-0">
-                            <div className="d-flex justify-content-between">
-                                <h3 className="card-title">Budget Report</h3>
-                                <Link to="/reports">View Report</Link>
-                            </div>
-                        </div>
-                        <div className="card-body">
-                            <div className="d-flex">
-                                <p className="d-flex flex-column">
-                                    <span className="text-bold text-lg">$18,230.00</span>
-                                    <span>Total Budget</span>
-                                </p>
-                                <p className="ml-auto d-flex flex-column text-right">
-                                    {/* <span className="text-success">
-                                        <i className="fas fa-arrow-up"></i> 33.1%
-                                    </span>
-                                    <span className="text-muted">Since last month</span> */}
-                                </p>
-                            </div>
 
-                            <div className="position-relative mb-4">
-                                <canvas id="sales-chart" height="200"></canvas>
-                            </div>
-
-                            <div className="d-flex flex-row justify-content-end">
-                                <span className="mr-2">
-                                    <i className="fas fa-square text-primary"></i> Allocated budget
-                                </span>
-
-                                <span>
-                                    <i className="fas fa-square text-gray"></i> Budget released
-                                </span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
