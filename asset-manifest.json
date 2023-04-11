@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/uno-project-management/static/css/main.4a90bd61.css",
-    "main.js": "/uno-project-management/static/js/main.2d728bf2.js",
+    "main.css": "/uno-project-management/static/css/main.a7546ec2.css",
+    "main.js": "/uno-project-management/static/js/main.c2956991.js",
     "static/js/787.ec3a9e1a.chunk.js": "/uno-project-management/static/js/787.ec3a9e1a.chunk.js",
+    "static/media/globe.webp": "/uno-project-management/static/media/globe.9912545db6feef96aa5f.webp",
+    "static/media/ghana.png": "/uno-project-management/static/media/ghana.f7287e8a93ad2b16a0e9.png",
     "index.html": "/uno-project-management/index.html",
-    "main.4a90bd61.css.map": "/uno-project-management/static/css/main.4a90bd61.css.map",
-    "main.2d728bf2.js.map": "/uno-project-management/static/js/main.2d728bf2.js.map",
+    "main.a7546ec2.css.map": "/uno-project-management/static/css/main.a7546ec2.css.map",
+    "main.c2956991.js.map": "/uno-project-management/static/js/main.c2956991.js.map",
     "787.ec3a9e1a.chunk.js.map": "/uno-project-management/static/js/787.ec3a9e1a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a90bd61.css",
-    "static/js/main.2d728bf2.js"
+    "static/css/main.a7546ec2.css",
+    "static/js/main.c2956991.js"
   ]
 }
