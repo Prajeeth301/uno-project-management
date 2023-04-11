@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ghanaImage from '../../assets/ghana.png';
+// import ghanaImage from '../../assets/ghana.png';
 import MonthlyBudgetChart from '../../charts/budget/monthly/monthly-budget-chart.component';
 import AreaMap from '../../components/area-map/area-map.component';
 import ProjectMonthlyStatistics from '../../charts/projects/monthly-statistics/monthly-statistics.component';

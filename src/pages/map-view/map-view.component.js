@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Maps from '../../components/maps/maps.component';
+// import Maps from '../../components/maps/maps.component';
 import { GHANA_REGIONS } from '../../mocks/regions.mock';
 import { PROJECTS_MOCK } from '../../mocks/projects.mock';
 import { PROJECT_CATEGORIES } from '../../config/project-categories.config';
