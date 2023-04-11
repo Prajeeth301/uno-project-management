@@ -4,7 +4,8 @@
 
 .main-sidebar {
     box-shadow: none;
-    border-right: 1px solid #dee2e6
+    border-right: 1px solid #dee2e6;
+    background: #fff;
 }
 
 .brand-link {

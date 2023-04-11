@@ -1,9 +1,10 @@
 export const PROJECTS_MOCK = {
     "ongoingProjects": [
         {
-            "id": "001Z",
-            "slug": "001-ZeroHunger",
-            "name": "001 - Zero Hunger",
+            "id": "1",
+            "projectId" : "ACE001",
+            "slug": "Food-Security",
+            "name": "Food Security",
             "type": "Zero Hunger",
             "createDate": "06 Mar, 2022",
             "startDate": "06 Mar, 2022",
@@ -15,10 +16,11 @@ export const PROJECTS_MOCK = {
             "description": "001 - Zero Hunger is a global initiative that recognizes that everyone deserves access to sufficient, safe, and nutritious food to live a healthy and productive life. This initiative aims to address the root causes of hunger and malnutrition, including poverty, limited access to resources, climate change, and inadequate agricultural practices."
         },
         {
-            "id": "002C",
-            "slug": "002-Clean-Water-and-Sanitation",
-            "name": "002 - Clean Water and Sanitation",
-            "type": "Clean Water and Sanitation",
+            "id": "2",
+            "projectId" : "BDF001",
+            "slug": "Nutrition-and-Resilience",
+            "name": "Nutrition and Resilience",
+            "type": "Zero Hunger",
             "createDate": "06 Apr, 2022",
             "startDate": "31 Jul, 2022",
             "endDate": "30 May, 2023",
@@ -29,10 +31,11 @@ export const PROJECTS_MOCK = {
             "description": "002 - Clean water and sanitation are essential for maintaining good health and preventing the spread of diseases. Access to clean water and sanitation facilities is a basic human right, yet millions of people around the world still lack access to these basic necessities."
         },
         {
-            "id": "003G",
-            "slug": "003-Good-Health-and-Well-being",
-            "name": "003 - Good Health and Well-being",
-            "type": "AGRICULTURE, VSLA, QUALITY SHEA PRODUCTION",
+            "id": "3",
+            "projectId" : "GIK001",
+            "slug": "Promote-Private-Sector-Engagement",
+            "name": "Promote Private Sector Engagement",
+            "type": "No Poverty",
             "createDate": "05 Jun, 2022",
             "startDate": "08 Jun, 2022",
             "endDate": "25 Nov, 2023",
@@ -43,10 +46,11 @@ export const PROJECTS_MOCK = {
             "description": "003 - Good Health and Well-being aims to ensure that everyone has access to quality healthcare services and the necessary information to make informed decisions about their health."
         },
         {
-            "id": "005C",
-            "slug": "005-Climate-Action",
-            "name": "005 - Climate Action",
-            "type": "EDUCATION,GOOD GOVERNANCE AND WASH",
+            "id": "4",
+            "projectId" : "KLM001",
+            "slug": "Value-and-Supply-Chains-Enhancement",
+            "name": "Value and Supply Chains Enhancement",
+            "type": "No Poverty",
             "createDate": "30 Jul, 2021",
             "startDate": "10 oct, 2021",
             "endDate": "30 Sep, 2024",
@@ -59,10 +63,11 @@ export const PROJECTS_MOCK = {
     ],
     "upcomingProjects": [
         {
-            "id": "001G",
-            "slug": "001-Gender-Equality",
-            "name": "001 - Gender Equality",
-            "type": "Gender Equality",
+            "id": "5",
+            "projectId" : "MNO001",
+            "slug": "Quality-and-Equitable-Competency-of-Education-System",
+            "name": "Quality and Equitable Competency of Education System",
+            "type": "No Poverty",
             "createDate": "9 Apr, 2023",
             "startDate": "15 Apr, 2023",
             "endDate": "30 Sep, 2025",
@@ -71,10 +76,11 @@ export const PROJECTS_MOCK = {
             "description": "Project F is a marketing campaign aimed at launching a new product line and increasing customer engagement and loyalty."
         },
         {
-            "id": "006I",
-            "slug": "006-Industry-Innovation-and-Infrastructure",
-            "name": "006 - Industry, Innovation and Infrastructure",
-            "type": "Industry, Innovation and Infrastructure",
+            "id": "6",
+            "projectId" : "XYZ001",
+            "slug": "Nutrition-and-Resilience",
+            "name": "Nutrition and Resilience",
+            "type": "Zero Hunger",
             "createDate": "10 Apr, 2023",
             "startDate": "20 Apr, 2023",
             "endDate": "31 Jul, 2024",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './projects.styles.css';
 import { Link } from 'react-router-dom';
 import { PROJECTS_MOCK } from '../../mocks/projects.mock';
@@ -6,12 +6,26 @@ import { PROJECT_STATUS_CONFIG } from '../../config/project-status.config';
 import { GHANA_REGIONS } from '../../mocks/regions.mock';
 import { PROJECT_CATEGORIES } from '../../config/project-categories.config';
 import { DEVELOPMENT_PARTNERS } from '../../mocks/development-partners.mock';
-
+import { DISTRICTS_MOCK } from '../../mocks/districts.mock';
+import { SDG_WISE_PROJECTS } from '../../mocks/sdg-wise-projects.mock';
 
 function Projects(props) {
+    const [activeSDG, setActiveSDG] = useState('No Poverty');
+    const [projects, setProjects] = useState(SDG_WISE_PROJECTS['No Poverty']);
+
     let allProjects = [...PROJECTS_MOCK.ongoingProjects, ...PROJECTS_MOCK.upcomingProjects]
 
     const { ongoingProjects, upcomingProjects } = PROJECTS_MOCK;
+
+    const handleSdgChange = (e) => {
+        setActiveSDG(e.target.value);
+        let projects = SDG_WISE_PROJECTS[e.target.value];
+        if(!!projects){
+            setProjects(projects);
+        }else{
+            setProjects([]);
+        }
+    }
 
     return (
         <section className="content pt-2">
@@ -43,10 +57,21 @@ function Projects(props) {
                         <div className='col-md-3'>
 
                             <div className="form-group">
-                                <label>Project Category</label>
-                                <select className="form-control">
+                                <label>SDG</label>
+                                <select className="form-control" onChange={handleSdgChange} value={activeSDG}>
                                     {
                                         PROJECT_CATEGORIES.map((category, index) => <option key={index}>{category}</option>)
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div className='col-md-3'>
+
+                            <div className="form-group">
+                                <label>Project Number</label>
+                                <select className="form-control">
+                                    {
+                                        allProjects.map((project, index) => <option key={index}>{project.projectId}</option>)
                                     }
                                 </select>
                             </div>
@@ -56,19 +81,31 @@ function Projects(props) {
                                 <label>Project Name</label>
                                 <select className="form-control">
                                     {
-                                        allProjects.map((project, index) => <option key={index}>{project.name}</option>)
+                                        projects.map((project, index) => <option key={index}>{project}</option>)
                                     }
                                 </select>
                             </div>
 
                         </div>
+                        
                         <div className='col-md-3'>
 
                             <div className="form-group">
                                 <label>Region</label>
                                 <select className="form-control">
                                     {
-                                        GHANA_REGIONS.map((region, index) => <option key={index}>{region}</option>)
+                                        GHANA_REGIONS.map((region, index) => <option key={index} selected={region === "Northern Region"}>{region}</option>)
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div className='col-md-3'>
+
+                            <div className="form-group">
+                                <label>District</label>
+                                <select className="form-control">
+                                    {
+                                        DISTRICTS_MOCK.map((district, index) => <option key={index}>{district}</option>)
                                     }
                                 </select>
                             </div>
@@ -80,7 +117,7 @@ function Projects(props) {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Project Category</th>
+                                <th>SDG</th>
                                 <th>Status</th>
                                 <th>Budget</th>
                                 <th>Progress</th>
@@ -138,7 +175,7 @@ function Projects(props) {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Project Category</th>
+                                <th>SDG</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
                                 <th>Budget</th>

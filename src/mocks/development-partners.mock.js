@@ -1,15 +1,2 @@
-export const DEVELOPMENT_PARTNERS = [
-    "USAID Advancing Nutrition Project",
-    "USAID RING 2 Project",
-    "Ghana Productive Safety Net",
-    "Global Communities",
-    "Afram Plains Development Organization (APDO)",
-    "German International Development Cooperation (GIZ)",
-    "World Vision Ghana",
-    "Japan International Cooperation Agency (JICA)",
-    "CIWED GHANA",
-    "SEND GHANA",
-    "Hand Hygiene for All (HH4A) Project",
-    "Ghana Development Communities Association (GDCA)"
-  ];
+export const DEVELOPMENT_PARTNERS =  ['FAO', 'IFAD', 'ILO', 'IOM', 'UNAIDS', 'UNESCO', 'UNFPA', 'UNICEF', 'UNIDP', 'WFP', 'WHO', 'USAID', 'USDA', 'GIZ', 'Global Affairs Canada', 'KoIKA', 'JICA', "World Bank", "African Development Bank", "Aximbank"];
   

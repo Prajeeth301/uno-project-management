@@ -4,7 +4,7 @@ import './header.styles.css';
 
 function Header(props) {
   return (
-    <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav className="main-header navbar navbar-expand navbar-white navbar-light justify-content-between">
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link" data-widget="pushmenu" to="/" role="button"><i className="fas fa-bars"></i></Link>
@@ -25,7 +25,9 @@ function Header(props) {
         </form>
       </ul>
 
-      <ul className="navbar-nav ml-auto">
+      <h4 className='text-uppercase text-info m-0' >Platform Name</h4>
+
+      <ul className="navbar-nav">
         <li className="nav-item dropdown">
           <Link className="nav-link" data-toggle="dropdown" to="/">
             <i className="far fa-comments"></i>

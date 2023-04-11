@@ -24,14 +24,14 @@ function Login(props) {
                     </div>
                     <div className='col-md-6'>
                         <div className="login-box">
+                        <div className='text-center'>
+                            <h3 className='text-uppercase bg-info text-white m-0' style={{"padding": "10px 20px"}}>Platform Name</h3>
+                        </div>
                             <div className="card card-outline card-primary">
                                 <div
                                     className="card-header text-center d-flex justify-content-center flex-column"
                                 >
                                     <b className="h1">Login</b>
-                                    <div className="img">
-                                        <img src="./UNO image.jpg" alt='' />
-                                    </div>
                                 </div>
                                 <div className="card-body">
                                     <p className="login-box-msg">Sign in to start your session</p>
