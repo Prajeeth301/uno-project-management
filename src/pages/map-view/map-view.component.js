@@ -108,8 +108,19 @@ function MapView(props) {
                     </div>
                             {/* <Maps /> */}
                             <div className='row'>
-                                <div className='offset-md-3 col-md-6'>
+                                <div className=' col-md-8'>
                                     <AreaMap showProjectStatus={showProjectStatus} />
+                                </div>
+                                <div className=' col-md-4'>
+                                    <div className='card-body'>
+                                        
+                                        <div className='small-box'>
+                                        <div className='inner'>
+                                        <h4>2M $</h4>
+                                        <p>Budget Contribution</p>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
