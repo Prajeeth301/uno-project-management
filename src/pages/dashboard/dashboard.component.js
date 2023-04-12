@@ -21,7 +21,7 @@ function Dashboard(props) {
                 <div className='col-md-12'>
                     <div className='card'>
                         <div className='card-header mb-0'>
-                            <h5 className='card-title text-bold'>Afram Plains Development Organization (APDO)</h5>
+                            <h5 className='card-title text-bold'> Food and Agriculture Organization (FAO)</h5>
                             <div className="card-tools">
                                 <Link to="/map-view" className='btn bg-gradient-success btn-sm mr-2'>
                                     <i className="fa fa-map-marked"></i>  Map View
